@@ -37,6 +37,8 @@ class qry:
         values = (Idno, name, contact, department, payment, amount, overtime,
                   (int(amount) * int(overtime[:-1]) / 100) + int(amount))
         return self.exe.pay(qry, values)
+    def ok(self):
+        pass
 
     def fetch_payment(self):
         qry = "SELECT * from payouts"
